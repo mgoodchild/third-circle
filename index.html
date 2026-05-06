@@ -6,17 +6,17 @@
 
 <title>Third Circle Partners</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 :root{
   --green:#1f4d3a;
   --dark:#16392b;
   --cream:#f4efe6;
-  --beige:#e9e2d6;
+  --beige:#e7e0d4;
   --accent:#c9a45c;
   --text:#1c1c1c;
-  --muted:#6b6b6b;
+  --muted:#6f6f6f;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -28,10 +28,11 @@ body{
   line-height:1.65;
 }
 
+/* CONTAINER */
 .container{
-  max-width:1100px;
+  max-width:1120px;
   margin:auto;
-  padding:32px 24px;
+  padding:36px 24px;
 }
 
 /* NAV */
@@ -39,19 +40,19 @@ nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  margin-bottom:80px;
+  margin-bottom:90px;
 }
 
 nav ul{
   display:flex;
-  gap:28px;
+  gap:30px;
   list-style:none;
   font-size:13px;
 }
 
 .btn{
   background:var(--green);
-  color:#fff;
+  color:white;
   padding:10px 18px;
   border-radius:999px;
   font-size:13px;
@@ -60,14 +61,15 @@ nav ul{
 /* HERO */
 .hero{
   display:grid;
-  gap:70px;
+  gap:80px;
   align-items:center;
 }
 
 .hero h1{
   font-family:'Playfair Display',serif;
-  font-size:3.6rem;
-  line-height:1.15;
+  font-size:3.7rem;
+  line-height:1.12;
+  letter-spacing:-0.5px;
 }
 
 .hero h1 span{
@@ -76,20 +78,21 @@ nav ul{
 }
 
 .hero p{
-  margin-top:24px;
+  margin-top:26px;
   color:var(--muted);
-  max-width:470px;
+  max-width:480px;
 }
 
 .hero-links{
-  margin-top:26px;
+  margin-top:28px;
   display:flex;
-  gap:20px;
+  gap:24px;
   align-items:center;
 }
 
 .hero-links a:last-child{
   font-size:13px;
+  color:#333;
 }
 
 .img-hero{
@@ -105,13 +108,12 @@ nav ul{
   object-fit:cover;
 }
 
-/* name tag */
 .name-tag{
   position:absolute;
   bottom:14px;
   left:14px;
-  background:#fff;
-  padding:6px 10px;
+  background:white;
+  padding:6px 12px;
   font-size:11px;
   border-radius:4px;
 }
@@ -120,15 +122,14 @@ nav ul{
 .stats{
   background:var(--beige);
   display:flex;
-  justify-content:space-between;
-  padding:34px 0;
   text-align:center;
-  margin-top:80px;
+  padding:36px 0;
+  margin-top:90px;
 }
 
 .stats div{
   flex:1;
-  border-right:1px solid #d8d2c6;
+  border-right:1px solid #d6cec2;
 }
 .stats div:last-child{border:none;}
 
@@ -140,7 +141,7 @@ nav ul{
 .stats p{
   font-size:11px;
   color:var(--muted);
-  letter-spacing:1px;
+  letter-spacing:1.5px;
 }
 
 /* VALUE GAP */
@@ -159,7 +160,7 @@ nav ul{
 .center h2{
   font-family:'Playfair Display';
   font-size:2.1rem;
-  margin:14px 0;
+  margin:16px 0;
 }
 
 .center em{
@@ -175,9 +176,9 @@ nav ul{
 
 /* GREEN */
 .green{
-  background:linear-gradient(135deg,var(--green),var(--dark));
+  background:linear-gradient(135deg,#1f4d3a,#16392b);
   color:white;
-  padding:100px 0;
+  padding:110px 0;
 }
 
 .cards{
@@ -190,7 +191,6 @@ nav ul{
   background:#f4efe6;
   padding:26px;
   border-radius:10px;
-  color:#222;
   font-size:14px;
 }
 
@@ -205,23 +205,22 @@ nav ul{
   padding:70px 0;
 }
 
-.quote-box{
-  display:grid;
-  gap:30px;
-  align-items:center;
-}
-
 .quote-img{
-  height:220px;
+  position:relative;
   border-radius:12px;
   overflow:hidden;
-  position:relative;
 }
 
 .quote-img img{
   width:100%;
-  height:100%;
+  height:260px;
   object-fit:cover;
+}
+
+.quote-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(0,0,0,0.7),transparent);
 }
 
 .quote-text{
@@ -229,9 +228,9 @@ nav ul{
   left:30px;
   bottom:30px;
   color:white;
-  max-width:300px;
   font-family:'Playfair Display';
-  font-size:1.4rem;
+  font-size:1.5rem;
+  max-width:340px;
 }
 
 /* HOW */
@@ -248,30 +247,26 @@ nav ul{
 
 .step{
   display:grid;
-  grid-template-columns:80px 1fr;
+  grid-template-columns:90px 1fr;
   gap:20px;
-  padding:20px 0;
+  padding:22px 0;
   border-bottom:1px solid #ddd;
 }
 
 .img-small{
-  width:80px;height:60px;border-radius:6px;overflow:hidden;
-}
-
-.step strong{
-  font-size:14px;
+  width:90px;height:70px;border-radius:6px;overflow:hidden;
 }
 
 /* ABOUT */
 .about{
   display:grid;
-  gap:50px;
-  align-items:center;
+  gap:60px;
   margin:120px 0;
+  align-items:center;
 }
 
 .img-about{
-  height:420px;
+  height:460px;
   border-radius:12px;
   overflow:hidden;
 }
@@ -283,8 +278,8 @@ nav ul{
 
 .about p{
   margin-top:16px;
-  color:var(--muted);
   font-size:14px;
+  color:var(--muted);
 }
 
 /* CTA */
@@ -292,12 +287,12 @@ nav ul{
   background:var(--green);
   color:white;
   text-align:center;
-  padding:110px 20px;
+  padding:120px 20px;
 }
 
 .cta h2{
   font-family:'Playfair Display';
-  font-size:2.3rem;
+  font-size:2.4rem;
 }
 
 .cta span{
@@ -311,8 +306,7 @@ nav ul{
 }
 
 .cta .btn{
-  margin-top:24px;
-  display:inline-block;
+  margin-top:26px;
 }
 
 /* FOOTER */
@@ -327,7 +321,6 @@ footer{
 @media(min-width:768px){
   .hero{grid-template-columns:1fr 1fr;}
   .cards{grid-template-columns:repeat(3,1fr);}
-  .quote-box{grid-template-columns:1fr;}
   .about{grid-template-columns:1fr 1fr;}
 }
 
@@ -357,9 +350,7 @@ footer{
   <div>
     <h1>Build a <span>more valuable</span> business.</h1>
 
-    <p>
-      I work with founders and owners of ambitious organisations — helping them build businesses that are more valuable, more profitable, and better run.
-    </p>
+    <p>I work with founders and owners of ambitious organisations — helping them build businesses that are more valuable, more profitable, and better run.</p>
 
     <div class="hero-links">
       <a class="btn">Book a Value Gap Assessment</a>
@@ -404,7 +395,11 @@ footer{
   <div class="container">
     <div class="quote-img">
       <img src="images/quote.jpg">
-      <div class="quote-text">You probably know what needs doing.<br><span style="color:#c9a45c;">I want to help you get there.</span></div>
+      <div class="quote-overlay"></div>
+      <div class="quote-text">
+        You probably know what needs doing.<br>
+        <span style="color:#c9a45c;">I want to help you get there.</span>
+      </div>
     </div>
   </div>
 </section>
@@ -435,15 +430,15 @@ footer{
 
   <div>
     <h2>I’ve built it, scaled it, and exited it. <em>Now I help others do the same.</em></h2>
-    <p>I’m John Clifton, founder of Third Circle Partners...</p>
+    <p>I’m John Clifton, founder of Third Circle Partners. I’ve spent 25 years building businesses...</p>
   </div>
 
 </div>
 
 <section class="cta">
   <h2>Let’s <span>have a conversation.</span></h2>
-  <p>A free 30-minute conversation. No agenda. No hard sell.</p>
-  <a class="btn">Book your free assessment</a>
+  <p>A free 30-minute conversation. No agenda. No hard sell. Just a useful conversation.</p>
+  <a class="btn">Book Your Free Assessment</a>
 </section>
 
 <footer>
